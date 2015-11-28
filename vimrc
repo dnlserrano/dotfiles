@@ -16,7 +16,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Highlighting
 set hlsearch
-map <Leader>h :noh<cr>
+map <silent> <Leader>h :noh<cr>
 
 " vim-maximizer
 nmap <Leader>m :MaximizerToggle<CR>
@@ -71,7 +71,15 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='solarized'
 
 " NERDTree
-map <C-n> :NERDTreeToggle<CR>
+nnoremap <silent> <C-n> :NERDTreeToggle<CR>
+
+" vim-multiple-cursors
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_start_key='<F5>'
+let g:multi_cursor_next_key='<C-n>'
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-k>'
+let g:multi_cursor_quit_key='<Esc>'
 
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""
   \ --ignore .git
@@ -109,7 +117,7 @@ Plugin 'nono/vim-handlebars'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'szw/vim-maximizer'
-" Plugin 'terryma/vim-multiple-cursors' SOON
+Plugin 'terryma/vim-multiple-cursors'
 " Plugin 'tpope/vim-surround' SOON
 
 " All of your Plugins must be added before the following line
