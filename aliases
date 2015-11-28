@@ -1,0 +1,15 @@
+# Bundler
+alias be="bundle exec"
+
+# Git
+alias gb="git branch"
+alias gc="git commit -v"
+alias gco="git checkout"
+alias gf="git fetch"
+alias gl="git log"
+alias gm="git merge"
+alias gp="git push"
+alias gs="git stash"
+alias gsp="git stash pop"
+alias gst="git status"
+alias gd="git diff"
