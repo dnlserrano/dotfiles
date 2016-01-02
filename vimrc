@@ -118,8 +118,12 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'szw/vim-maximizer'
 Plugin 'terryma/vim-multiple-cursors'
-" Plugin 'tpope/vim-surround' SOON
-
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'qpkorr/vim-renamer'
+" SOON...
+" Plugin 'hallettj/jslint.vim'
+" Plugin 'tpope/vim-surround'
+"
 " All of your Plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
