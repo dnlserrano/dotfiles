@@ -21,16 +21,11 @@ plugins=(git)
 
 
 # User configuration
-export PATH=$PATH:"~/.rvm/gems/ruby-2.2.1/bin:~/.rvm/gems/ruby-2.2.1@global/bin:~/.rvm/rubies/ruby-2.2.1/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/bin:/usr/sbin:/sbin:~/.rvm/bin:/usr/local/opt/android-sdk-r24.1.2/platform-tools:~/.node/bin:~/.dotfiles/scripts"
-# export MANPATH="/usr/local/man:$MANPATH"
-
 source $ZSH/oh-my-zsh.sh
 
 # RVM
 source $HOME/.rvm/scripts/rvm
-
-# Android SDK
-export PATH="$PATH:/usr/local/opt/android-sdk-r24.1.2/platform-tools" # Add Android SDK to PATH
+export PATH=$PATH:"~/.rvm/gems/ruby-2.2.1/bin:~/.rvm/gems/ruby-2.2.1@global/bin:~/.rvm/rubies/ruby-2.2.1/bin:~/.rvm/bin"
 
 # Navigation
 bindkey "\e\e[D" backward-word
