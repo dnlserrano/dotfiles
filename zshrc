@@ -33,7 +33,9 @@ bindkey "\e\e[D" backward-word
 bindkey "\e\e[C" forward-word
 
 # npm
-export PATH="$PATH:$HOME/.node/bin" # Add NPM to PATH
+export NPM_PACKAGES=$HOME/.npm-packages
+export NODE_PATH=$NPM_PACKAGES/lib/node_modules
+export PATH=$PATH:$NPM_PACKAGES/bin
 
 # golang
 export GOPATH=$HOME/Workspace/go # Add GOPATH
