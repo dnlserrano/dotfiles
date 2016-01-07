@@ -44,9 +44,6 @@ export PATH=$PATH:$GOPATH/bin
 # Aliases
 source ~/.dotfiles/aliases
 
-# Scripts
-export PATH=$PATH:$HOME/.dotfiles/scripts
-
 # Editor
 export EDITOR=vim
 
