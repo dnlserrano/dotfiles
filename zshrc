@@ -37,6 +37,10 @@ export NPM_PACKAGES=$HOME/.npm-packages
 export NODE_PATH=$NPM_PACKAGES/lib/node_modules
 export PATH=$PATH:$NPM_PACKAGES/bin
 
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
 # golang
 export GOPATH=$HOME/Workspace/go # Add GOPATH
 export PATH=$PATH:$GOPATH/bin
