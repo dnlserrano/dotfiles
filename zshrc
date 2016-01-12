@@ -22,7 +22,7 @@ plugins=(git)
 
 # User configuration
 source $ZSH/oh-my-zsh.sh
-export PATH=$PATH:"/usr/local/bin:/usr/bin:/usr/local/sbin:/bin:/usr/sbin:/sbin"
+export PATH=$PATH:"/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin"
 
 # RVM
 source $HOME/.rvm/scripts/rvm
