@@ -26,7 +26,6 @@ export PATH=$PATH:"/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin"
 
 # RVM
 source $HOME/.rvm/scripts/rvm
-export PATH=$PATH:"~/.rvm/gems/ruby-2.2.1/bin:~/.rvm/gems/ruby-2.2.1@global/bin:~/.rvm/rubies/ruby-2.2.1/bin:~/.rvm/bin"
 
 # Navigation
 bindkey "\e\e[D" backward-word
