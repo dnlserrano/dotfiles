@@ -88,7 +88,7 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""
   \ --ignore .DS_Store
   \ --ignore "**/*.pyc"
   \ --ignore node_modules'
-let g:agprg='ag --nocolor --nogroup --column
+let g:ag_prg='ag --nocolor --nogroup --column
   \ --ignore .git
   \ --ignore .svn
   \ --ignore .hg
