@@ -13,6 +13,7 @@ alias gs="git stash"
 alias gsp="git stash pop"
 alias gst="git status"
 alias gd="git diff"
+alias gdc="git diff --cached"
 
 # GitHub
 alias gh="~/.dotfiles/scripts/gh.sh"
