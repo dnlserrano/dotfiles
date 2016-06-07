@@ -18,3 +18,5 @@ alias gdc="git diff --cached"
 # GitHub
 alias gh="~/.dotfiles/scripts/gh.sh"
 
+# Vim
+alias vim="mvim -v"
