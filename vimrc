@@ -96,6 +96,9 @@ let g:ag_prg='ag --nocolor --nogroup --column
   \ --ignore "**/*.pyc"
   \ --ignore node_modules'
 
+" Set custom syntax highlighting
+au BufNewFile,BufRead *.monitrc setlocal syntax=monitrc
+
 " Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -121,6 +124,7 @@ Plugin 'szw/vim-maximizer'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'qpkorr/vim-renamer'
+Plugin 'tmatilai/vim-monit'
 " SOON...
 " Plugin 'hallettj/jslint.vim'
 " Plugin 'tpope/vim-surround'
