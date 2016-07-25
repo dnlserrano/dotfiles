@@ -39,7 +39,7 @@ fi
 
 if [ ! -z "$branch" ]
 then
-    bitbucketurl="${bitbucketurl}/branch/${branch}"
+    bitbucketurl="${bitbucketurl}/branch/${branch}?dest=development"
 fi
 
 open $bitbucketurl
