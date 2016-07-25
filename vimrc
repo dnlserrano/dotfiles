@@ -64,10 +64,11 @@ inoremap <Down> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
 
-" Fonts
+" vim-airline
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#branch#format = 1
 
-" vim-airline theme
+" vim-airline-themes
 let g:airline_theme='solarized'
 
 " NERDTree
