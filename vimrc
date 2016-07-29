@@ -126,6 +126,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'qpkorr/vim-renamer'
 Plugin 'tmatilai/vim-monit'
+Plugin 'godlygeek/tabular'
 " SOON...
 " Plugin 'hallettj/jslint.vim'
 " Plugin 'tpope/vim-surround'
