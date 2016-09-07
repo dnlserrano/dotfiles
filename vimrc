@@ -127,6 +127,7 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'qpkorr/vim-renamer'
 Plugin 'tmatilai/vim-monit'
 Plugin 'godlygeek/tabular'
+Plugin 'kchmck/vim-coffee-script'
 " SOON...
 " Plugin 'hallettj/jslint.vim'
 " Plugin 'tpope/vim-surround'
