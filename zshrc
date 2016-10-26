@@ -52,3 +52,6 @@ export EDITOR=vim
 
 # Autojump
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
+# less
+export LESS=-X
