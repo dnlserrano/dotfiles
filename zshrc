@@ -44,6 +44,9 @@ export NVM_DIR="$HOME/.nvm"
 export GOPATH=$HOME/Workspace/go # Add GOPATH
 export PATH=$PATH:$GOPATH/bin
 
+# Docker
+export PATH=$PATH:~/.docker
+
 # Aliases
 source ~/.dotfiles/aliases
 
