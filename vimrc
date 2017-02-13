@@ -14,6 +14,9 @@ set backspace=2
 " Stop auto comments
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+" Buffer listing
+nmap <Space> :CtrlPBuffer<CR>
+
 " Highlighting
 set hlsearch
 map <silent> <Leader>h :noh<cr>
