@@ -28,6 +28,9 @@ nmap <Leader>m :MaximizerToggle<CR>
 nmap <Leader>% :vs<CR>
 nmap <Leader>" :sp<CR>
 
+" Ruby pry debugger
+nmap <Leader>p orequire "pry"; binding.pry <Esc>
+
 " Buffer navigation
 nmap <Leader>bp :bprevious<CR>
 nmap <Leader>bn :bnext<CR>
