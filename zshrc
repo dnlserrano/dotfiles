@@ -19,13 +19,13 @@ ZSH_THEME="agnoster"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-
 # User configuration
 source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:"/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin"
 
 # RVM
 source $HOME/.rvm/scripts/rvm
+export PATH="$PATH:/usr/local/rvm/bin"
 
 # Navigation
 bindkey "\e\e[D" backward-word
@@ -46,6 +46,9 @@ export PATH=$PATH:$GOPATH/bin
 
 # Docker
 export PATH=$PATH:~/.docker
+
+# Dinghy
+eval $(dinghy env)
 
 # Aliases
 source ~/.dotfiles/aliases
