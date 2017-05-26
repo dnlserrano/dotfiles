@@ -65,3 +65,6 @@ export EDITOR=vim
 
 # less
 export LESS=-X
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

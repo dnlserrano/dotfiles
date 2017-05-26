@@ -88,23 +88,11 @@ let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-k>'
 let g:multi_cursor_quit_key='<Esc>'
 
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""
-  \ --ignore .git
-  \ --ignore .svn
-  \ --ignore .hg
-  \ --ignore .DS_Store
-  \ --ignore "**/*.pyc"
-  \ --ignore node_modules'
-let g:ag_prg='ag --nocolor --nogroup --column
-  \ --ignore .git
-  \ --ignore .svn
-  \ --ignore .hg
-  \ --ignore .DS_Store
-  \ --ignore "**/*.pyc"
-  \ --ignore node_modules'
-
 " Set custom syntax highlighting
 au BufNewFile,BufRead *.monitrc setlocal syntax=monitrc
+
+" fzf
+nmap <silent> <C-p> :Files <CR>
 
 " vim-plug
 call plug#begin('~/.vim/plugged')
@@ -115,8 +103,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'edkolev/tmuxline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
-Plug 'kien/ctrlp.vim'
-Plug 'rking/ag.vim'
 Plug 'vim-ruby/vim-ruby'
 Plug 'ajh17/VimCompletesMe'
 Plug 'thoughtbot/vim-rspec'
@@ -131,6 +117,8 @@ Plug 'qpkorr/vim-renamer'
 Plug 'tmatilai/vim-monit'
 Plug 'godlygeek/tabular'
 Plug 'kchmck/vim-coffee-script'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 " Plug 'hallettj/jslint.vim'
 " Plug 'tpope/vim-surround'
 
