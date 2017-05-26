@@ -106,39 +106,32 @@ let g:ag_prg='ag --nocolor --nogroup --column
 " Set custom syntax highlighting
 au BufNewFile,BufRead *.monitrc setlocal syntax=monitrc
 
-" Vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" vim-plug
+call plug#begin('~/.vim/plugged')
 
-" Set the runtime path to include Vundle and initialize
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'edkolev/tmuxline.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
-Plugin 'rking/ag.vim'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'ajh17/VimCompletesMe'
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'jgdavey/tslime.vim'
-Plugin 'nono/vim-handlebars'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'szw/vim-maximizer'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'qpkorr/vim-renamer'
-Plugin 'tmatilai/vim-monit'
-Plugin 'godlygeek/tabular'
-Plugin 'kchmck/vim-coffee-script'
-" SOON...
-" Plugin 'hallettj/jslint.vim'
-" Plugin 'tpope/vim-surround'
-"
-" All of your Plugins must be added before the following line
-call vundle#end()
-filetype plugin indent on
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'edkolev/tmuxline.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
+Plug 'kien/ctrlp.vim'
+Plug 'rking/ag.vim'
+Plug 'vim-ruby/vim-ruby'
+Plug 'ajh17/VimCompletesMe'
+Plug 'thoughtbot/vim-rspec'
+Plug 'jgdavey/tslime.vim'
+Plug 'nono/vim-handlebars'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'szw/vim-maximizer'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'elixir-lang/vim-elixir'
+Plug 'qpkorr/vim-renamer'
+Plug 'tmatilai/vim-monit'
+Plug 'godlygeek/tabular'
+Plug 'kchmck/vim-coffee-script'
+" Plug 'hallettj/jslint.vim'
+" Plug 'tpope/vim-surround'
 
+call plug#end()
