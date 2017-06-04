@@ -28,6 +28,7 @@ then
 fi
 
 bitbucketurl=${bitbucketurl/git\@bitbucket\.org\:/https://bitbucket.org/}
+bitbucketurl=${bitbucketurl/ssh:\/\/\git@bitbucket\.org/https://bitbucket.org}
 bitbucketurl=${bitbucketurl%\.git}
 
 if [ -z "$2" ]

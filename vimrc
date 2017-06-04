@@ -88,57 +88,38 @@ let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-k>'
 let g:multi_cursor_quit_key='<Esc>'
 
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""
-  \ --ignore .git
-  \ --ignore .svn
-  \ --ignore .hg
-  \ --ignore .DS_Store
-  \ --ignore "**/*.pyc"
-  \ --ignore node_modules'
-let g:ag_prg='ag --nocolor --nogroup --column
-  \ --ignore .git
-  \ --ignore .svn
-  \ --ignore .hg
-  \ --ignore .DS_Store
-  \ --ignore "**/*.pyc"
-  \ --ignore node_modules'
-
 " Set custom syntax highlighting
 au BufNewFile,BufRead *.monitrc setlocal syntax=monitrc
 
-" Vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" fzf
+nmap <silent> <C-p> :Files <CR>
 
-" Set the runtime path to include Vundle and initialize
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'edkolev/tmuxline.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
-Plugin 'rking/ag.vim'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'ajh17/VimCompletesMe'
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'jgdavey/tslime.vim'
-Plugin 'nono/vim-handlebars'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'szw/vim-maximizer'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'qpkorr/vim-renamer'
-Plugin 'tmatilai/vim-monit'
-Plugin 'godlygeek/tabular'
-Plugin 'kchmck/vim-coffee-script'
-" SOON...
-" Plugin 'hallettj/jslint.vim'
-" Plugin 'tpope/vim-surround'
-"
-" All of your Plugins must be added before the following line
-call vundle#end()
-filetype plugin indent on
+" vim-plug
+call plug#begin('~/.vim/plugged')
 
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'edkolev/tmuxline.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
+Plug 'vim-ruby/vim-ruby'
+Plug 'ajh17/VimCompletesMe'
+Plug 'thoughtbot/vim-rspec'
+Plug 'jgdavey/tslime.vim'
+Plug 'nono/vim-handlebars'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'szw/vim-maximizer'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'elixir-lang/vim-elixir'
+Plug 'qpkorr/vim-renamer'
+Plug 'tmatilai/vim-monit'
+Plug 'godlygeek/tabular'
+Plug 'kchmck/vim-coffee-script'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+" Plug 'hallettj/jslint.vim'
+" Plug 'tpope/vim-surround'
+
+call plug#end()

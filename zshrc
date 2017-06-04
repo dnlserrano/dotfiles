@@ -49,6 +49,10 @@ export PATH=$PATH:~/.docker
 
 # Dinghy
 eval $(dinghy env)
+export DOCKER_HOST=tcp://192.168.64.5:2376
+export DOCKER_CERT_PATH=/Users/dnlserrano/.docker/machine/machines/dinghy
+export DOCKER_TLS_VERIFY=1
+export DOCKER_MACHINE_NAME=dinghy
 
 # Aliases
 source ~/.dotfiles/aliases
@@ -61,3 +65,6 @@ export EDITOR=vim
 
 # less
 export LESS=-X
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
