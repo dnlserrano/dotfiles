@@ -57,6 +57,9 @@ export DOCKER_MACHINE_NAME=dinghy
 # Aliases
 source ~/.dotfiles/aliases
 
+# AWS EB Client
+export PATH=$PATH:$HOME/Library/Python/2.7/bin
+
 # Editor
 export EDITOR=vim
 
