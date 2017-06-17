@@ -1,5 +1,5 @@
-# Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
+# Path to oh-my-zsh installation
+export ZSH=$HOME/.oh-my-zsh
 
 # Default username
 DEFAULT_USER=dnlserrano
@@ -7,16 +7,10 @@ DEFAULT_USER=dnlserrano
 # Disable automatic renaming of shell
 DISABLE_AUTO_TITLE=true
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
+# Set theme
 ZSH_THEME="agnoster"
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
+# oh-my-zsh plugins
 plugins=(git)
 
 # User configuration
@@ -45,17 +39,19 @@ export GOPATH=$HOME/Workspace/go # Add GOPATH
 export PATH=$PATH:$GOPATH/bin
 
 # Docker
-export PATH=$PATH:~/.docker
+export PATH=$PATH:$HOME/.docker
 
 # Dinghy
-eval $(dinghy env)
-export DOCKER_HOST=tcp://192.168.64.5:2376
-export DOCKER_CERT_PATH=/Users/dnlserrano/.docker/machine/machines/dinghy
-export DOCKER_TLS_VERIFY=1
-export DOCKER_MACHINE_NAME=dinghy
+if which dinghy >/dev/null; then
+  eval $(dinghy env)
+  export DOCKER_HOST=tcp://192.168.64.5:2376
+  export DOCKER_CERT_PATH=/Users/dnlserrano/.docker/machine/machines/dinghy
+  export DOCKER_TLS_VERIFY=1
+  export DOCKER_MACHINE_NAME=dinghy
+fi
 
 # Aliases
-source ~/.dotfiles/aliases
+source $HOME/.dotfiles/aliases
 
 # AWS EB Client
 export PATH=$PATH:$HOME/Library/Python/2.7/bin
@@ -63,11 +59,14 @@ export PATH=$PATH:$HOME/Library/Python/2.7/bin
 # Editor
 export EDITOR=vim
 
-# Autojump
-[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
-
 # less
 export LESS=-X
 
 # fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
+
+# awscli
+if [ -d $HOME/.awscli ]; then
+  source $HOME/.awscli/bin/aws_zsh_completer.sh
+  PATH=$PATH:$HOME/.awscli/bin
+fi
