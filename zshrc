@@ -59,6 +59,7 @@ export EDITOR=vim
 export LESS=-X
 
 # fzf
+setopt HIST_IGNORE_ALL_DUPS
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
 # awscli
