@@ -15,7 +15,7 @@ set backspace=2
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Buffer listing
-nmap <Space> :CtrlPBuffer<CR>
+nmap <Space> :Buffers<CR>
 
 " Highlighting
 set hlsearch
