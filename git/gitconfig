@@ -1,4 +1,7 @@
 [color]
-	ui = true
+  ui = true
+[user]
+  name = Daniel José Domingos Serrano
+  email = danieljdserrano@gmail.com
 [core]
-	pager = less -R
+  pager = less -iXFR
