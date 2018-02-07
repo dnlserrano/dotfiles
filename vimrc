@@ -117,7 +117,7 @@ Plug 'qpkorr/vim-renamer'
 Plug 'tmatilai/vim-monit'
 Plug 'godlygeek/tabular'
 Plug 'kchmck/vim-coffee-script'
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 " Plug 'hallettj/jslint.vim'
 " Plug 'tpope/vim-surround'
