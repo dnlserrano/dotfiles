@@ -28,8 +28,18 @@ nmap <Leader>m :MaximizerToggle<CR>
 nmap <Leader>% :vs<CR>
 nmap <Leader>" :sp<CR>
 
-" Ruby pry debugger
-nmap <Leader>p orequire "pry"; binding.pry <Esc>
+" Debuggers
+function! AddDebug()
+  let extension = expand('%:e')
+
+  if (extension == 'ex' || extension == 'exs')
+    call append('.', 'require IEx; IEx.pry')
+  elseif (extension == 'rb')
+    call append('.', 'require "pry"; Pry.pager = nil; binding.pry')
+  endif
+endfunction
+
+nmap <silent> <Leader>p :call AddDebug()<CR>
 
 " Buffer navigation
 nmap <Leader>bp :bprevious<CR>
