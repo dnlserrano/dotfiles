@@ -78,7 +78,19 @@ let g:airline#extensions#branch#format = 1
 let g:airline_theme='solarized'
 
 " NERDTree
-nnoremap <silent> <C-n> :NERDTreeToggle<CR>
+function! IsNerdTreeEnabled()
+  return exists('t:NERDTreeBufName') && bufwinnr(t:NERDTreeBufName) != -1
+endfunction
+
+function! MyNerdToggle()
+  if IsNerdTreeEnabled() || bufname('%') == ''
+    :NERDTreeToggle
+  else
+    :NERDTreeFind
+  endif
+endfunction
+
+nnoremap <silent> <C-n> :call MyNerdToggle()<CR>
 
 " vim-multiple-cursors
 let g:multi_cursor_use_default_mapping=0
