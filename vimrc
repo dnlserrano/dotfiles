@@ -35,7 +35,7 @@ function! AddDebug()
   if (extension == 'ex' || extension == 'exs')
     call append('.', 'require IEx; IEx.pry')
   elseif (extension == 'rb')
-    call append('.', 'require "pry"; Pry.pager = nil; binding.pry')
+    call append('.', 'require "pry"; binding.pry')
   elseif (extension == 'py')
     call append('.', 'import pdb; pdb.set_trace()')
   endif
