@@ -121,6 +121,9 @@ nmap <silent> <C-p> :Files <CR>
 " vim-plug
 call plug#begin('~/.vim/plugged')
 
+" vim-fugitive
+nnoremap <Leader>gl :silent Glog<CR>
+
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
