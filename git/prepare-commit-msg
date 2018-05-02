@@ -1,5 +1,0 @@
-#!/bin/sh
-
-ticket=$(git symbolic-ref --short HEAD | sed 's/.*\/\([a-zA-Z]*\)-\([0-9]*\).*/JIRA \1-\2/g')
-original_msg=$(cat $1)
-echo "\n\n$ticket\n$original_msg" > $1

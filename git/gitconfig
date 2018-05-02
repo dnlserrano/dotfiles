@@ -5,3 +5,5 @@
   email = danieljdserrano@gmail.com
 [core]
   pager = less -iXFR
+[init]
+  templatedir = ~/.git-templates

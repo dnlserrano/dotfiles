@@ -1,0 +1,37 @@
+# Prepare parameters
+#
+# #1 - message file
+# #2 - type of commit (commit,merge,squash)
+# #3 - treeish (HEAD)
+#
+# amend or reword are represented by "commmit" and "HEAD"
+
+# MSG_FILE="${1}"
+# MSG_TMP_FILE="${MSG_FILE}.tmp"
+
+COMMIT_TYPE="${2}"
+TREEISH="${3}"
+
+# Ignore amend/reword
+#
+if [ ${COMMIT_TYPE} == "commit" ] && [ ${TREEISH} == "HEAD" ]; then
+    # echo "DEBUG: amend/reword ignored"
+    exit 0
+fi
+
+# Ignore squash and merge commits: proceed with default file
+#
+if [ "${COMMIT_TYPE}" == "merge" ] || [ "${COMMIT_TYPE}" == "squash" ]; then
+    # echo "DEBUG: squash/merge ignored"
+    exit 0
+fi
+
+# If commit message is a fixup message, ignore it
+[[ -n "$(cat $1 | grep 'fixup!')" ]] && FIXUP="YES"
+
+TICKET=$(git symbolic-ref HEAD | rev | cut -d/ -f1 | rev | grep -o -E "[A-Z]+-[0-9]+")
+ORIGINAL=$(cat $1)
+
+if [[ -n "${TICKET}" && -z "${FIXUP}" ]]; then
+    echo "\n\nJIRA ${TICKET}\n${ORIGINAL}" > $1
+fi
