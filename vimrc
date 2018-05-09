@@ -10,6 +10,7 @@ set t_Co=256
 set background=dark
 set number
 set backspace=2
+set clipboard=unnamed
 
 " Stop auto comments
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
