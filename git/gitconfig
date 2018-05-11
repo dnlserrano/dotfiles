@@ -7,3 +7,16 @@
   pager = less -iXFR
 [init]
   templatedir = ~/.git-templates
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  fp = push --force-with-lease
+  pl = pull
+  df = diff
+  dc = diff --cached
+  sa = stash
+  sp = stash pop
+  ft = fetch
+  ll = log --pretty=format:'%h %s'

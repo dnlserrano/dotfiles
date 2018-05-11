@@ -1,22 +1,5 @@
-# Bundler
-alias be="bundle exec"
-
 # Git
-alias gb="git branch"
-alias gc="git commit -v"
-alias gco="git checkout"
-alias gf="git fetch"
-alias gl="git log"
-alias gm="git merge"
-alias gp="git push"
-alias gpl="git pull"
-alias gfp="git push --force-with-lease"
-alias gs="git stash"
-alias gsp="git stash pop"
-alias gst="git status"
-alias gd="git diff"
-alias gdc="git diff --cached"
-alias gll="git log --pretty=format:'%h %s'"
+alias g=git
 
 # GitHub
 alias gh="~/.dotfiles/scripts/gh.sh"
