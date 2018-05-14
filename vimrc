@@ -118,6 +118,12 @@ au BufNewFile,BufRead *.monitrc setlocal syntax=monitrc
 
 " fzf
 nmap <silent> <C-p> :Files <CR>
+command! -bang -nargs=* Ag
+      \ call fzf#vim#grep(
+      \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
+      \   <bang>0 ? fzf#vim#with_preview('up:60%')
+      \     : fzf#vim#with_preview('right:50%:hidden', '?'),
+      \   <bang>0)
 
 " vim-plug
 call plug#begin('~/.vim/plugged')

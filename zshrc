@@ -61,6 +61,7 @@ export LESS=-X
 
 # fzf
 setopt HIST_IGNORE_ALL_DUPS
+export FZF_DEFAULT_COMMAND='rg --files'
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
 # awscli
