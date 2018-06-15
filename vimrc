@@ -153,6 +153,7 @@ Plug 'godlygeek/tabular'
 Plug 'kchmck/vim-coffee-script'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-xmark'
 " Plug 'hallettj/jslint.vim'
 " Plug 'tpope/vim-surround'
 
