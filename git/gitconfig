@@ -9,7 +9,7 @@
   templatedir = ~/.git-templates
 [alias]
   co = checkout
-  ci = commit
+  ci = commit -v
   cp = cherry-pick
   st = status
   br = branch
