@@ -13,7 +13,8 @@
   cp = cherry-pick
   st = status
   br = branch
-  fp = push --force-with-lease
+  fp = push --force-with-lease origin HEAD
+  psh = push origin HEAD
   pl = pull
   df = diff
   dc = diff --cached
