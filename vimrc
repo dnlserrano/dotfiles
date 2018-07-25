@@ -113,9 +113,6 @@ let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-k>'
 let g:multi_cursor_quit_key='<Esc>'
 
-" Set custom syntax highlighting
-au BufNewFile,BufRead *.monitrc setlocal syntax=monitrc
-
 " fzf
 nmap <silent> <C-p> :Files <CR>
 command! -bang -nargs=* Ag
@@ -148,7 +145,6 @@ Plug 'szw/vim-maximizer'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'elixir-lang/vim-elixir'
 Plug 'qpkorr/vim-renamer'
-Plug 'tmatilai/vim-monit'
 Plug 'godlygeek/tabular'
 Plug 'kchmck/vim-coffee-script'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
