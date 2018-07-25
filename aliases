@@ -6,3 +6,6 @@ alias gh="~/.dotfiles/scripts/gh.sh"
 
 # Bitbucket
 alias bb="~/.dotfiles/scripts/bb.sh"
+
+# Ctags
+alias ctags="`brew --prefix`/bin/ctags"
