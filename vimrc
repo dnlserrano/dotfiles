@@ -152,6 +152,11 @@ nnoremap <Leader>gl :silent Glog<CR>
 " vim-gutentags
 let g:gutentags_cache_dir='~/.vim/plugged/vim-gutentags/tags/'
 
+" vim-gitgutter
+nmap <Leader>hn <Plug>GitGutterNextHunk
+nmap <Leader>hp <Plug>GitGutterPrevHunk
+nmap <Leader>hv <Plug>GitGutterPreviewHunk
+
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -175,6 +180,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-xmark'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'airblade/vim-gitgutter'
 " Plug 'hallettj/jslint.vim'
 " Plug 'tpope/vim-surround'
 
