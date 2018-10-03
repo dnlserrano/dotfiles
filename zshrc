@@ -50,6 +50,9 @@ fi
 # Aliases
 source $HOME/.dotfiles/aliases
 
+# Company stuff
+source $HOME/.company
+
 # AWS EB Client
 export PATH=$PATH:$HOME/Library/Python/2.7/bin
 
