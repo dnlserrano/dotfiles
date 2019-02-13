@@ -105,14 +105,6 @@ endfunction
 
 nnoremap <silent> <C-n> :call MyNerdToggle()<CR>
 
-" vim-multiple-cursors
-let g:multi_cursor_use_default_mapping=0
-let g:multi_cursor_start_key='<F5>'
-let g:multi_cursor_next_key='<C-n>'
-let g:multi_cursor_prev_key='<C-p>'
-let g:multi_cursor_skip_key='<C-k>'
-let g:multi_cursor_quit_key='<Esc>'
-
 " fzf
 nmap <silent> <C-p> :Files <CR>
 command! -bang -nargs=* Ag
@@ -171,7 +163,6 @@ Plug 'nono/vim-handlebars'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'szw/vim-maximizer'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'elixir-lang/vim-elixir'
 Plug 'qpkorr/vim-renamer'
 Plug 'godlygeek/tabular'
