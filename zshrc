@@ -62,6 +62,10 @@ export EDITOR=vim
 # less
 export LESS=-X
 
+# char encoding
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 # fzf
 setopt HIST_IGNORE_ALL_DUPS
 export FZF_DEFAULT_COMMAND='rg --files'
