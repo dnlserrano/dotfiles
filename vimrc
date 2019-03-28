@@ -27,7 +27,7 @@ nmap <Leader>m :MaximizerToggle<CR>
 
 " tmux-like splitting
 nmap <Leader>% :vs<CR>
-nmap <Leader>" :sp<CR>
+nmap <Leader>@ :sp<CR>
 
 " Debuggers
 function! AddDebug()
