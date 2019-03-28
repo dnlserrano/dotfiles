@@ -83,6 +83,9 @@ inoremap <Down> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
 
+" Breakline in normal mode
+nnoremap K i<CR><ESC>
+
 " vim-airline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#branch#format = 1
