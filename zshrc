@@ -17,27 +17,9 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:"/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin"
 
-# RVM
-source $HOME/.rvm/scripts/rvm
-export PATH="$PATH:/usr/local/rvm/bin"
-
 # Navigation
 bindkey "\e\e[D" backward-word
 bindkey "\e\e[C" forward-word
-
-# npm
-export NPM_PACKAGES=$HOME/.npm-packages
-export NODE_PATH=$NPM_PACKAGES/lib/node_modules
-export PATH=$PATH:$NPM_PACKAGES/bin
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
-# golang
-export GOPATH=$HOME/Workspace/go # Add GOPATH
-export PATH=$PATH:$GOPATH/bin
 
 # Docker
 export PATH=$PATH:$HOME/.docker
@@ -52,9 +34,6 @@ source $HOME/.dotfiles/aliases
 
 # Company stuff
 source $HOME/.company
-
-# AWS EB Client
-export PATH=$PATH:$HOME/Library/Python/2.7/bin
 
 # Editor
 export EDITOR=vim
