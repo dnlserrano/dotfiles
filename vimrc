@@ -144,9 +144,6 @@ call plug#begin('~/.vim/plugged')
 " vim-fugitive
 nnoremap <Leader>gl :silent Glog<CR>
 
-" vim-gutentags
-let g:gutentags_cache_dir='~/.vim/plugged/vim-gutentags/tags/'
-
 " vim-gitgutter
 nmap <Leader>hn <Plug>GitGutterNextHunk
 nmap <Leader>hp <Plug>GitGutterPrevHunk
@@ -173,7 +170,6 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-xmark'
-Plug 'ludovicchabant/vim-gutentags'
 Plug 'airblade/vim-gitgutter'
 Plug 'mhinz/vim-mix-format'
 " Plug 'hallettj/jslint.vim'
