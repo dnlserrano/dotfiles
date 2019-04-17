@@ -172,7 +172,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-xmark'
 Plug 'airblade/vim-gitgutter'
 Plug 'mhinz/vim-mix-format'
+Plug 'tpope/vim-surround'
 " Plug 'hallettj/jslint.vim'
-" Plug 'tpope/vim-surround'
 
 call plug#end()
