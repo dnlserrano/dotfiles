@@ -15,5 +15,7 @@ ln -s $DOTFILES/vim/colors/solarized.vim ~/.vim/colors/solarized.vim
 # git
 ln -s $DOTFILES/git/gitconfig ~/.gitconfig
 
-mkdir -p ~/.git/git-templates/hooks
-ln -s $DOTFILES/git/git-templates/hooks/prepare-commit-msg ~/.git/git-templates/hooks/prepare-commit-msg
+COMMIT_HOOK=$DOTFILES/git/git-templates/hooks/prepare-commit-msg
+mkdir -p ~/.git-templates/hooks
+ln -s $COMMIT_HOOK ~/.git-templates/hooks/prepare-commit-msg
+chmod +x $COMMIT_HOOK
