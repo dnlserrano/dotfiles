@@ -1,4 +1,5 @@
 # Path to oh-my-zsh installation
+export DOTFILES=$HOME/.dotfiles
 export ZSH=$HOME/.oh-my-zsh
 
 # Default username
@@ -30,7 +31,7 @@ if which dinghy >/dev/null; then
 fi
 
 # Aliases
-source $HOME/.dotfiles/aliases
+source $DOTFILES/aliases
 
 # Company stuff
 source $HOME/.company
@@ -49,6 +50,7 @@ export LC_ALL=en_US.UTF-8
 setopt HIST_IGNORE_ALL_DUPS
 export FZF_DEFAULT_COMMAND='rg --files'
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
+source $DOTFILES/scripts/fzf.sh
 
 # awscli
 if [ -d $HOME/.awscli ]; then
