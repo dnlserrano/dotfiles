@@ -1,6 +1,9 @@
 # Git
 alias g=git
 
+# vim
+alias vim=/usr/local/bin/vim
+
 # GitHub
 alias gh="~/.dotfiles/scripts/gh.sh"
 
