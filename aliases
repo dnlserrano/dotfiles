@@ -4,11 +4,7 @@ alias g=git
 # vim
 alias vim=/usr/local/bin/vim
 
-# GitHub
-alias gh="~/.dotfiles/scripts/gh.sh"
-
-# Bitbucket
-alias bb="~/.dotfiles/scripts/bb.sh"
-
-# Ctags
-alias ctags="`brew --prefix`/bin/ctags"
+# Open remote branch
+alias gh="~/.dotfiles/scripts/gh.sh" # github
+alias bb="~/.dotfiles/scripts/bb.sh" # bitbucket
+alias gl="~/.dotfiles/scripts/gl.sh" # gitlab
