@@ -48,12 +48,9 @@ nmap <silent> <Leader>p :call AddDebug()<CR>
 nmap <Leader>bp :bprevious<CR>
 nmap <Leader>bn :bnext<CR>
 
-" RSpec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>r :call RunNearestSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-let g:rspec_runner = "os_x_iterm2"
-let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec}\n")'
+" vim-test mappings
+nmap <silent> <Leader>t :TestFile<CR>
+let test#strategy = "tslime"
 
 " tslime.vim
 vmap <C-c><C-c> <Plug>SendSelectionToTmux
@@ -157,7 +154,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-ruby/vim-ruby'
 Plug 'ajh17/VimCompletesMe'
-Plug 'thoughtbot/vim-rspec'
+Plug 'janko/vim-test'
 Plug 'jgdavey/tslime.vim'
 Plug 'nono/vim-handlebars'
 Plug 'pangloss/vim-javascript'
