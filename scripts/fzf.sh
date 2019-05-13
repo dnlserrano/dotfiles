@@ -23,7 +23,7 @@ _gen_fzf_default_opts() {
 }
 
 kex() {
-  local POD=$(kubectl get pods --no-headers | fzf-tmux --reverse --multi | awk -F'[ ]' '{print $1}')
+  local POD=$(kubectl --namespace development get pods --no-headers | fzf-tmux --reverse --multi | awk -F'[ ]' '{print $1}')
   local CONTEXT=$(kubectl config current-context | tr -d '\n')
   local NAMESPACE=$(kubectl config view | grep namespace: | cut -d ':' -f 2 | tr -d '[:space:]' | tr -d '\n')
   if [[ $POD != '' ]]; then
