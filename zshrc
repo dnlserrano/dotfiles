@@ -52,6 +52,9 @@ export FZF_DEFAULT_COMMAND='rg --files'
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 source $DOTFILES/scripts/fzf.sh
 
+# fubectl
+[ -f $HOME/.kube/fubectl.source ] && source $HOME/.kube/fubectl.source
+
 # awscli
 if [ -d $HOME/.awscli ]; then
   source $HOME/.awscli/bin/aws_zsh_completer.sh
