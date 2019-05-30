@@ -60,3 +60,7 @@ if [ -d $HOME/.awscli ]; then
   source $HOME/.awscli/bin/aws_zsh_completer.sh
   PATH=$PATH:$HOME/.awscli/bin
 fi
+
+# asdf
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
