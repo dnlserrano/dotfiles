@@ -106,6 +106,7 @@ endfunction
 nnoremap <silent> <C-n> :call MyNerdToggle()<CR>
 
 " fzf
+nnoremap <Leader>gl :Commits<CR>
 nmap <silent> <C-p> :Files <CR>
 command! -bang -nargs=* Ag
       \ call fzf#vim#grep(
@@ -137,9 +138,6 @@ endfunction
 
 " vim-plug
 call plug#begin('~/.vim/plugged')
-
-" vim-fugitive
-nnoremap <Leader>gl :silent Glog<CR>
 
 " vim-gitgutter
 nmap <Leader>hn <Plug>GitGutterNextHunk
