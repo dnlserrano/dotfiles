@@ -15,9 +15,6 @@ set clipboard=unnamed
 " Stop auto comments
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" Buffer listing
-nmap <Space> :Buffers<CR>
-
 " Highlighting
 set hlsearch
 map <silent> <Leader>h :noh<cr>
@@ -106,7 +103,11 @@ endfunction
 nnoremap <silent> <C-n> :call MyNerdToggle()<CR>
 
 " fzf
-nnoremap <Leader>gl :Commits<CR>
+nnoremap <silent> <Space> :Buffers<CR>
+nnoremap <silent> <leader>f :Files<CR>
+nnoremap <silent> <leader>l :BLines<CR>
+nnoremap <silent> <Leader>gl :Commits<CR>
+
 nmap <silent> <C-p> :Files <CR>
 command! -bang -nargs=* Ag
       \ call fzf#vim#grep(
