@@ -87,6 +87,25 @@ let g:airline#extensions#branch#format = 1
 " vim-airline-themes
 let g:airline_theme='solarized'
 
+" vim-projectionist
+let g:projectionist_heuristics = {
+      \   "mix.exs": {
+      \     "lib/*.ex": {
+      \       "type": "lib",
+      \       "alternate": "test/{}_test.exs",
+      \       "template": ["defmodule {camelcase|capitalize|dot} do", "end"],
+      \     },
+      \     "test/*_test.exs": {
+      \       "type": "test",
+      \       "alternate": "lib/{}.ex",
+      \       "template": ["defmodule {camelcase|capitalize|dot}Test do", "  use ExUnit.Case, async: true", "", "end"],
+      \     },
+      \     "mix.exs": {"type": "mix"},
+      \     "config/*.exs": {"type": "config"},
+      \   }
+      \ }
+nmap <silent> <leader>a :AV<CR>
+
 " NERDTree
 function! IsNerdTreeEnabled()
   return exists('t:NERDTreeBufName') && bufwinnr(t:NERDTreeBufName) != -1
@@ -149,7 +168,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'edkolev/tmuxline.vim'
-Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-ruby/vim-ruby'
 Plug 'ajh17/VimCompletesMe'
@@ -168,7 +186,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-xmark'
 Plug 'airblade/vim-gitgutter'
 Plug 'mhinz/vim-mix-format'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-projectionist'
 
 call plug#end()
