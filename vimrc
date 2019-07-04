@@ -80,11 +80,10 @@ inoremap <Right> <NOP>
 " Breakline in normal mode
 nnoremap K i<CR><ESC>
 
-" vim-airline
+" vim-airline / vim-airline-themes / tmuxline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#branch#format = 1
-
-" vim-airline-themes
+let g:airline#extensions#tmuxline#enabled = 0
 let g:airline_theme='solarized'
 
 " vim-projectionist

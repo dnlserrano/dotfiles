@@ -16,7 +16,7 @@ plugins=(git)
 
 # User configuration
 source $ZSH/oh-my-zsh.sh
-export PATH=$PATH:"/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin"
+export PATH=$PATH:"/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/opt/coreutils/libexec/gnubin"
 
 # Navigation
 bindkey "\e\e[D" backward-word
