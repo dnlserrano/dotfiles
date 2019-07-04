@@ -9,7 +9,7 @@ DEFAULT_USER=dnlserrano
 DISABLE_AUTO_TITLE=true
 
 # Set theme
-ZSH_THEME="agnoster"
+ZSH_THEME="punctual"
 
 # oh-my-zsh plugins
 plugins=(git)

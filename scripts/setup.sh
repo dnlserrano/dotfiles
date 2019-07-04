@@ -19,3 +19,7 @@ COMMIT_HOOK=$DOTFILES/git/git-templates/hooks/prepare-commit-msg
 mkdir -p ~/.git-templates/hooks
 ln -s $COMMIT_HOOK ~/.git-templates/hooks/prepare-commit-msg
 chmod +x $COMMIT_HOOK
+
+# oh-my-zsh
+mkdir -p ~/.oh-my-zsh/custom/themes
+ln -s $DOTFILES/oh-my-zsh/custom/themes/punctual.zsh-theme ~/.oh-my-zsh/custom/themes/
