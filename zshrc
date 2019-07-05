@@ -25,11 +25,6 @@ bindkey "\e\e[C" forward-word
 # Docker
 export PATH=$PATH:$HOME/.docker
 
-# Dinghy
-if which dinghy >/dev/null; then
-  eval $(dinghy env)
-fi
-
 # Aliases
 source $DOTFILES/aliases
 
