@@ -19,6 +19,9 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 set hlsearch
 map <silent> <Leader>h :noh<cr>
 
+" Hide ~ for empty lines
+highlight EndOfBuffer ctermfg=black ctermbg=black
+
 " vim-maximizer
 nmap <Leader>m :MaximizerToggle<CR>
 
