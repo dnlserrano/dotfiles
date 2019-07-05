@@ -109,6 +109,9 @@ let g:projectionist_heuristics = {
 nmap <silent> <leader>a :AV<CR>
 
 " NERDTree
+set fillchars+=vert:│
+hi VertSplit ctermbg=NONE guibg=NONE
+
 function! IsNerdTreeEnabled()
   return exists('t:NERDTreeBufName') && bufwinnr(t:NERDTreeBufName) != -1
 endfunction
