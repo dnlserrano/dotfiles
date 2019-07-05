@@ -83,11 +83,11 @@ inoremap <Right> <NOP>
 " Breakline in normal mode
 nnoremap K i<CR><ESC>
 
-" vim-airline / vim-airline-themes / tmuxline
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#branch#format = 1
-let g:airline#extensions#tmuxline#enabled = 0
-let g:airline_theme='solarized'
+" lightline.vim
+set noshowmode
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ }
 
 " vim-projectionist
 let g:projectionist_heuristics = {
@@ -170,8 +170,7 @@ nmap <Leader>hp <Plug>GitGutterPrevHunk
 nmap <Leader>hv <Plug>GitGutterPreviewHunk
 
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-ruby/vim-ruby'
