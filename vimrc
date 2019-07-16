@@ -29,6 +29,14 @@ nmap <Leader>m :MaximizerToggle<CR>
 nmap <Leader>% :vs<CR>
 nmap <Leader>@ :sp<CR>
 
+" tmux will send xterm-style keys when its xterm-keys option is on
+if &term =~ '^screen'
+  execute "set <xUp>=\e[1;*A"
+  execute "set <xDown>=\e[1;*B"
+  execute "set <xRight>=\e[1;*C"
+  execute "set <xLeft>=\e[1;*D"
+endif
+
 " Debuggers
 function! AddDebug()
   let extension = expand('%:e')
@@ -194,5 +202,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-projectionist'
+Plug 'ahonn/resize.vim'
 
 call plug#end()
