@@ -43,7 +43,7 @@ export LC_ALL=en_US.UTF-8
 
 # fzf
 setopt HIST_IGNORE_ALL_DUPS
-export FZF_DEFAULT_COMMAND='rg --files'
+export FZF_DEFAULT_COMMAND='rg --files --hidden'
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 source $DOTFILES/scripts/fzf.sh
 
