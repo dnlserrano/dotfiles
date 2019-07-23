@@ -148,14 +148,8 @@ command! -bang -nargs=* Ag
       \     : fzf#vim#with_preview('right:50%:hidden', '?'),
       \   <bang>0)
 
-" CTRL-A CTRL-Q to select all and build quickfix list
-function! s:build_quickfix_list(lines)
-  call setqflist(map(copy(a:lines), '{ "filename": v:val }'))
-  copen
-  cc
-endfunction
-let g:fzf_action = {'ctrl-q': function('s:build_quickfix_list')}
-let $FZF_DEFAULT_OPTS = '--bind ctrl-a:select-all'
+" CTRL-Q to select all (to then press Enter to send it to quickfix)
+let $FZF_DEFAULT_OPTS = '--bind ctrl-q:select-all'
 
 " read large files
 let g:LargeFile = 1024 * 1024 * 10
