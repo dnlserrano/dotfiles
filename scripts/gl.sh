@@ -39,7 +39,7 @@ fi
 
 if [ ! -z "$branch" ]
 then
-    gitlaburl="${gitlaburl}/compare/development...${branch}"
+    gitlaburl="${gitlaburl}/compare/master...${branch}"
 fi
 
 open $gitlaburl
