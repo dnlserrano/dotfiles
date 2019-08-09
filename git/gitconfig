@@ -22,3 +22,8 @@
   sp = stash pop
   ft = fetch
   ll = log --pretty=format:'%h %s'
+[filter "lfs"]
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
