@@ -207,5 +207,7 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-unimpaired'
 Plug 'ahonn/resize.vim'
+Plug 'martinda/Jenkinsfile-vim-syntax'
+Plug 'lepture/vim-jinja'
 
 call plug#end()
