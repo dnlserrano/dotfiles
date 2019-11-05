@@ -219,3 +219,4 @@ endfunction
 
 syntax enable
 colorscheme onedark
+hi Normal ctermbg=none
