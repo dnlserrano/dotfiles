@@ -1,13 +1,46 @@
+" vim-plug
+call plug#begin('~/.vim/plugged')
+
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'itchyny/lightline.vim'
+Plug 'edkolev/tmuxline.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'vim-ruby/vim-ruby'
+Plug 'ajh17/VimCompletesMe'
+Plug 'janko/vim-test'
+Plug 'jgdavey/tslime.vim'
+Plug 'nono/vim-handlebars'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'szw/vim-maximizer'
+Plug 'elixir-lang/vim-elixir'
+Plug 'qpkorr/vim-renamer'
+Plug 'godlygeek/tabular'
+Plug 'kchmck/vim-coffee-script'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-xmark'
+Plug 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-mix-format'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-projectionist'
+Plug 'tpope/vim-unimpaired'
+Plug 'ahonn/resize.vim'
+Plug 'martinda/Jenkinsfile-vim-syntax'
+Plug 'lepture/vim-jinja'
+Plug 'joshdick/onedark.vim'
+
+call plug#end()
+
 " Leader key
 let mapleader=","
 
-syntax enable
 filetype off
-colorscheme solarized
 set nocompatible
 set laststatus=2
 set t_Co=256
-set background=dark
 set number
 set backspace=2
 set clipboard=unnamed
@@ -24,6 +57,18 @@ highlight EndOfBuffer ctermfg=black ctermbg=black
 
 " vim-maximizer
 nmap <Leader>m :MaximizerToggle<CR>
+
+" vim-gitgutter
+nmap <Leader>hn <Plug>GitGutterNextHunk
+nmap <Leader>hp <Plug>GitGutterPrevHunk
+nmap <Leader>hv <Plug>GitGutterPreviewHunk
+
+set updatetime=250
+
+let g:gitgutter_sign_added = '●'
+let g:gitgutter_sign_modified = '●'
+let g:gitgutter_sign_removed = '●'
+let g:gitgutter_sign_modified_removed = '●'
 
 " tmux-like splitting
 nmap <Leader>% :vs<CR>
@@ -94,7 +139,7 @@ nnoremap K i<CR><ESC>
 " lightline.vim
 set noshowmode
 let g:lightline = {
-      \ 'colorscheme': 'one',
+      \ 'colorscheme': 'onedark',
       \ }
 
 " vim-projectionist
@@ -172,49 +217,5 @@ function! LargeFile()
  autocmd VimEnter *  echo "The file is larger than " . (g:LargeFile / 1024 / 1024) . " MB, so some options are changed (see .vimrc for details)."
 endfunction
 
-" vim-plug
-call plug#begin('~/.vim/plugged')
-
-" vim-gitgutter
-nmap <Leader>hn <Plug>GitGutterNextHunk
-nmap <Leader>hp <Plug>GitGutterPrevHunk
-nmap <Leader>hv <Plug>GitGutterPreviewHunk
-
-set updatetime=250
-
-let g:gitgutter_sign_added = '●'
-let g:gitgutter_sign_modified = '●'
-let g:gitgutter_sign_removed = '●'
-let g:gitgutter_sign_modified_removed = '●'
-
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'itchyny/lightline.vim'
-Plug 'edkolev/tmuxline.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'vim-ruby/vim-ruby'
-Plug 'ajh17/VimCompletesMe'
-Plug 'janko/vim-test'
-Plug 'jgdavey/tslime.vim'
-Plug 'nono/vim-handlebars'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'szw/vim-maximizer'
-Plug 'elixir-lang/vim-elixir'
-Plug 'qpkorr/vim-renamer'
-Plug 'godlygeek/tabular'
-Plug 'kchmck/vim-coffee-script'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'junegunn/vim-xmark'
-Plug 'airblade/vim-gitgutter'
-Plug 'mhinz/vim-mix-format'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-projectionist'
-Plug 'tpope/vim-unimpaired'
-Plug 'ahonn/resize.vim'
-Plug 'martinda/Jenkinsfile-vim-syntax'
-Plug 'lepture/vim-jinja'
-
-call plug#end()
+syntax enable
+colorscheme onedark

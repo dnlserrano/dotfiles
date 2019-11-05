@@ -9,9 +9,6 @@ ln -s $DOTFILES/zshrc ~/.zshrc
 # vim
 ln -s $DOTFILES/vimrc ~/.vimrc
 
-mkdir -p ~/.vim/colors
-ln -s $DOTFILES/vim/colors/solarized.vim ~/.vim/colors/solarized.vim
-
 # git
 ln -s $DOTFILES/git/gitconfig ~/.gitconfig
 
