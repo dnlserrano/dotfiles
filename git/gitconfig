@@ -19,6 +19,7 @@
   pl = pull
   df = diff
   dc = diff --cached
+  dl = diff-tree --no-commit-id --name-only -r
   sa = stash
   sp = stash pop
   ft = fetch
