@@ -14,7 +14,7 @@ TREEISH="${3}"
 
 # Ignore amend/reword
 #
-if [ ${COMMIT_TYPE} == "commit" ] && [ ${TREEISH} == "HEAD" ]; then
+if [ "${COMMIT_TYPE}" == "commit" ] && [ "${TREEISH}" == "HEAD" ]; then
     # echo "DEBUG: amend/reword ignored"
     exit 0
 fi
