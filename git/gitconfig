@@ -10,6 +10,7 @@
   templatedir = ~/.git-templates
 [alias]
   co = checkout
+  coj = "!sh -c \"git co $(git br | grep $1 | head -n 1)\""
   ci = commit -v
   cp = cherry-pick
   st = status
