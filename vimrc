@@ -30,6 +30,7 @@ Plug 'ahonn/resize.vim'
 Plug 'martinda/Jenkinsfile-vim-syntax'
 Plug 'lepture/vim-jinja'
 Plug 'joshdick/onedark.vim'
+Plug 'dense-analysis/ale'
 
 call plug#end()
 
@@ -63,6 +64,12 @@ nmap <Leader>hn <Plug>GitGutterNextHunk
 nmap <Leader>hp <Plug>GitGutterPrevHunk
 nmap <Leader>hv <Plug>GitGutterPreviewHunk
 
+" ale
+let g:ale_elixir_elixir_ls_release = $HOME . '/.elixir-ls/release'
+let g:ale_linters = {'elixir': ['elixir-ls']}
+let g:ale_elixir_elixir_ls_config = {'elixirLS': {'dialyzerEnabled': v:false}}
+let g:ale_fixers = {'elixir': ['mix_format']}
+let g:ale_completion_enabled = 1
 
 " gitgutter
 let g:gitgutter_sign_added = '●'
