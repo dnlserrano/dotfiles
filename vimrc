@@ -16,7 +16,6 @@ Plug 'szw/vim-maximizer'
 Plug 'elixir-lang/vim-elixir'
 Plug 'qpkorr/vim-renamer'
 Plug 'godlygeek/tabular'
-Plug 'kchmck/vim-coffee-script'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-xmark'
@@ -44,6 +43,7 @@ set t_Co=256
 set number
 set backspace=2
 set clipboard=unnamed
+set encoding=utf-8
 
 " Stop auto comments
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -63,12 +63,13 @@ nmap <Leader>hn <Plug>GitGutterNextHunk
 nmap <Leader>hp <Plug>GitGutterPrevHunk
 nmap <Leader>hv <Plug>GitGutterPreviewHunk
 
-set updatetime=250
 
+" gitgutter
 let g:gitgutter_sign_added = '●'
 let g:gitgutter_sign_modified = '●'
 let g:gitgutter_sign_removed = '●'
 let g:gitgutter_sign_modified_removed = '●'
+set updatetime=250
 
 " tmux-like splitting
 nmap <Leader>% :vs<CR>
