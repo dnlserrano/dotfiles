@@ -31,6 +31,7 @@ Plug 'martinda/Jenkinsfile-vim-syntax'
 Plug 'lepture/vim-jinja'
 Plug 'joshdick/onedark.vim'
 Plug 'dense-analysis/ale'
+Plug 'cespare/vim-toml'
 
 call plug#end()
 
