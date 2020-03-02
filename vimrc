@@ -175,6 +175,7 @@ nmap <silent> <leader>a :AV<CR>
 " NERDTree
 set fillchars+=vert:│
 hi VertSplit ctermbg=NONE guibg=NONE
+let NERDTreeShowHidden=1
 
 function! IsNerdTreeEnabled()
   return exists('t:NERDTreeBufName') && bufwinnr(t:NERDTreeBufName) != -1
