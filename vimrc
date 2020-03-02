@@ -46,6 +46,9 @@ set backspace=2
 set clipboard=unnamed
 set encoding=utf-8
 
+" format JSON via python
+nmap <Leader>j :%!python -m json.tool<CR>
+
 " Stop auto comments
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
