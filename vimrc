@@ -32,6 +32,7 @@ Plug 'lepture/vim-jinja'
 Plug 'joshdick/onedark.vim'
 Plug 'dense-analysis/ale'
 Plug 'cespare/vim-toml'
+Plug 'psf/black', { 'branch': 'stable' }
 
 call plug#end()
 
