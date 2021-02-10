@@ -33,5 +33,5 @@ TICKET=$(git symbolic-ref HEAD | rev | cut -d/ -f1 | rev | grep -o -E "[A-Z]+-[0
 ORIGINAL=$(cat $1)
 
 if [[ -n "${TICKET}" && -z "${FIXUP}" ]]; then
-    echo "\n\nJIRA ${TICKET}\n${ORIGINAL}" > $1
+    echo "${ORIGINAL}\n\nJIRA ${TICKET}" > $1
 fi
