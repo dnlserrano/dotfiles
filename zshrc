@@ -1,5 +1,5 @@
 # Path to oh-my-zsh installation
-export DOTFILES=$HOME/.dotfiles
+export DOTFILES=$HOME/dotfiles
 export ZSH=$HOME/.oh-my-zsh
 
 # Default username

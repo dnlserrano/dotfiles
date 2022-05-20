@@ -1,4 +1,4 @@
-DOTFILES=~/.dotfiles
+DOTFILES=~/dotfiles
 
 # tmux
 ln -s $DOTFILES/tmux.conf ~/.tmux.conf
@@ -19,4 +19,4 @@ chmod +x $COMMIT_HOOK
 
 # oh-my-zsh
 mkdir -p ~/.oh-my-zsh/custom/themes
-ln -s $DOTFILES/oh-my-zsh/custom/themes/punctual.zsh-theme ~/.oh-my-zsh/custom/themes/
+ln -s $DOTFILES/oh-my-zsh/custom/themes/punctual.zsh-theme ~/.oh-my-zsh/custom/themes/punctual.zsh-theme
