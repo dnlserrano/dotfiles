@@ -2,7 +2,7 @@
 alias g=git
 
 # vim
-alias vim=/usr/local/bin/vim
+alias vim=/usr/bin/vi
 
 # Open remote branch
 alias gh="~/.dotfiles/scripts/gh.sh" # github
