@@ -5,6 +5,6 @@ alias g=git
 alias vim=/usr/bin/vi
 
 # Open remote branch
-alias gh="~/.dotfiles/scripts/gh.sh" # github
-alias bb="~/.dotfiles/scripts/bb.sh" # bitbucket
-alias gl="~/.dotfiles/scripts/gl.sh" # gitlab
+alias gh=$HOME/dotfiles/scripts/gh.sh # github
+alias gl=$HOME/dotfiles/scripts/gl.sh" # gitlab
+alias bb=$HOME/dotfiles/scripts/bb.sh" # bitbucket
