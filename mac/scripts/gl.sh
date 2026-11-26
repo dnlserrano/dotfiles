@@ -1,8 +1,8 @@
 #!/bin/sh
 #
-# Opens the bitbucket page for a repo/branch in your browser.
+# Opens the GitLab page for a repo/branch in your browser.
 #
-# bb [remote] [branch]
+# gl [remote] [branch]
 
 git rev-parse 2>/dev/null
 
@@ -27,7 +27,19 @@ then
     exit 1
 fi
 
-gitlaburl=${gitlaburl/git\@gitlab\.eu-west-1\.mgmt\.onfido\.xyz\:/https://gitlab.eu-west-1.mgmt.onfido.xyz/}
+# Convert either git@host:owner/repo.git or ssh://git@host/owner/repo.git to HTTPS.
+case "$gitlaburl" in
+  git@*)
+    hostpath=${gitlaburl#git@}
+    hostpath=${hostpath/:/\/}
+    gitlaburl="https://$hostpath"
+    ;;
+  ssh://*)
+    hostpath=${gitlaburl#ssh://}
+    hostpath=${hostpath#*@}
+    gitlaburl="https://$hostpath"
+    ;;
+esac
 gitlaburl=${gitlaburl%\.git}
 
 if [ -z "$2" ]

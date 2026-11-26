@@ -17,12 +17,11 @@ at the root; everything else is platform-specific.
 
 ## Setup
 
-Clone the repo anywhere (e.g. `~/Onfido/dotfiles`), then run the script for
-that machine:
+Clone the repo to `~/dotfiles`, then run the script for that machine:
 
 ```sh
-git clone git@github.com:dnlserrano/dotfiles.git ~/Onfido/dotfiles
-cd ~/Onfido/dotfiles
+git clone git@github.com:dnlserrano/dotfiles.git ~/dotfiles
+cd ~/dotfiles
 ./mac/setup.sh     # home/work Mac
 ./linux/setup.sh   # Beelink / Ubuntu
 ```
