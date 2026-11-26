@@ -44,8 +44,10 @@ Links `bashrc`, `aliases`, `tmux.conf`, the shared minimal `vimrc`, and the
 shared git config. No oh-my-zsh, no TPM, no fzf/nvm/vim-plug — just bash and a
 small tmux status bar in Ubuntu aubergine/orange: session, window list, git
 branch, load average and clock, using only tmux built-ins and two tiny shell
-commands. If `~/.profile` does not source `~/.bashrc`, the script appends a
-guarded hook for login shells.
+commands. In copy mode, `v` starts a selection and `y` (or `Enter`) yanks it to
+the system clipboard via `linux/clip.sh` (xclip/xsel/Wayland, with an OSC 52
+fallback); mouse drag selections work too. If `~/.profile` does not source
+`~/.bashrc`, the script appends a guarded hook for login shells.
 
 ## Where to edit
 
