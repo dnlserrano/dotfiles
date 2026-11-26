@@ -4,6 +4,12 @@ case $- in
   *) return ;;
 esac
 
+# Keep system-wide defaults (bash-completion, etc.).
+[ -r /etc/bash.bashrc ] && . /etc/bash.bashrc
+
+# Local tooling.
+[ -d "$HOME/.opencode/bin" ] && export PATH="$HOME/.opencode/bin:$PATH"
+
 export EDITOR=vim
 export VISUAL=vim
 export LESS=-X
