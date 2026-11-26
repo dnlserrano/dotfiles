@@ -1,0 +1,10 @@
+# Git
+alias g=git
+
+# vim
+alias vim=/usr/bin/vi
+
+# Open remote branch
+alias gh="$DOTFILES/mac/scripts/gh.sh" # github
+alias gl="$DOTFILES/mac/scripts/gl.sh" # gitlab
+alias bb="$DOTFILES/mac/scripts/bb.sh" # bitbucket

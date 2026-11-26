@@ -1,5 +1,7 @@
+# Repo root (via the ~/.dotfiles symlink created by mac/setup.sh)
+export DOTFILES="$HOME/.dotfiles"
+
 # Path to oh-my-zsh installation
-export DOTFILES=$HOME/dotfiles
 export ZSH=$HOME/.oh-my-zsh
 
 # Default username
@@ -26,10 +28,10 @@ bindkey "\e\e[C" forward-word
 export PATH=$PATH:$HOME/.docker
 
 # Aliases
-source $DOTFILES/aliases
+source "$DOTFILES/mac/aliases"
 
-# Company stuff
-source $HOME/.company
+# Company stuff (work Macs only)
+[ -f "$HOME/.company" ] && source "$HOME/.company"
 
 # Editor
 export EDITOR=vim
@@ -45,7 +47,7 @@ export LC_ALL=en_US.UTF-8
 setopt HIST_IGNORE_ALL_DUPS
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
-source $DOTFILES/scripts/fzf.sh
+source "$DOTFILES/mac/scripts/fzf.sh"
 
 # fubectl
 [ -f $HOME/.kube/fubectl.source ] && source $HOME/.kube/fubectl.source

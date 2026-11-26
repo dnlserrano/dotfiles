@@ -1,0 +1,20 @@
+# ~/.bashrc -- deliberately minimal: no frameworks, no plugins.
+case $- in
+  *i*) ;;
+  *) return ;;
+esac
+
+export EDITOR=vim
+export VISUAL=vim
+export LESS=-X
+
+# History
+HISTCONTROL=ignoreboth
+HISTSIZE=1000
+HISTFILESIZE=2000
+shopt -s histappend checkwinsize
+
+# Prompt: user@host:path$ (Ubuntu-ish colours)
+PS1='\[\e[01;32m\]\u@\h\[\e[00m\]:\[\e[01;34m\]\w\[\e[00m\]\$ '
+
+[ -f "$HOME/.aliases" ] && . "$HOME/.aliases"

@@ -1,0 +1,13 @@
+# A few everyday aliases. Everything else stays in the muscle-memory layer.
+
+# Git
+alias g='git'
+alias gs='git status --short'
+alias gd='git diff'
+alias gl='git log --oneline --decorate -10'
+
+# Navigation
+alias ..='cd ..'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
